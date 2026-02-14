@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#09060f" />
+    <meta
+      name="description"
+      content="Drama on Deck — Bollywood Days. Lights. Camera. Drama. An immersive Bollywood experience of games, performances & music."
+    />
+
+    <title>Drama on Deck • Bollywood Days</title>
+
+    <!--
+      Modern fonts (fast + readable).
+      If you want 100% offline, remove these and rely on system fonts.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- Opening cinematic intro (full-screen) -->
+    <div class="opening-intro" data-opening-intro aria-hidden="true">
+      <div class="opening-intro__backdrop"></div>
+      <div class="opening-intro__grain"></div>
+      <div class="opening-intro__spot opening-intro__spot--left"></div>
+      <div class="opening-intro__spot opening-intro__spot--right"></div>
+
+      <div class="opening-intro__content">
+        <div class="opening-intro__logo-wrap">
+          <img src="AdVITya 26 Logo.png" alt="Advitya fest logo" class="opening-intro__logo" loading="lazy" />
+        </div>
+        <div class="opening-intro__title">ADVITYA 2026</div>
+        <div class="opening-intro__subtitle">Lights · Camera · Fest</div>
+        <div class="opening-intro__skip">Tap anywhere to skip</div>
+      </div>
+    </div>
+
+    <!-- Film grain + vignette overlay (subtle, performance-friendly) -->
+    <div class="fx fx-grain" aria-hidden="true"></div>
+    <div class="fx fx-vignette" aria-hidden="true"></div>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar" data-elevate>
+      <div class="container topbar__inner">
+        <a class="brand" href="#home" aria-label="Drama on Deck home">
+          <span class="brand__mark" aria-hidden="true">
+            <img
+              src="NElogo.png"
+              alt="NE CLUB logo"
+              class="brand__logo"
+              loading="lazy"
+            />
+          </span>
+          <span class="brand__text">
+            <span class="brand__title">Drama on Deck</span>
+            <span class="brand__sub">Bollywood Days</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="#about">About</a>
+          <a class="nav__link" href="#games">Games</a>
+          <a class="nav__link" href="#poster">Poster</a>
+          <a class="nav__link" href="#coordinators">Coordinators</a>
+        </nav>
+
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" data-menu-btn>
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <div class="mobile-nav" data-menu>
+        <a class="mobile-nav__link" href="#about">About</a>
+        <a class="mobile-nav__link" href="#games">Games</a>
+        <a class="mobile-nav__link" href="#poster">Poster</a>
+        <a class="mobile-nav__link" href="#coordinators">Coordinators</a>
+        <div class="mobile-nav__cta">
+          <a class="btn btn--primary btn--glow" href="#" target="_blank" rel="noreferrer" data-register
+            >Register Now</a
+          >
+          <a class="btn btn--ghost" href="#" target="_blank" rel="noreferrer" data-official>Visit Us</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" id="home" data-parallax>
+        <div class="hero__bg" aria-hidden="true">
+          <div class="hero__spotlight hero__spotlight--a"></div>
+          <div class="hero__spotlight hero__spotlight--b"></div>
+          <div class="hero__neon hero__neon--top"></div>
+          <div class="hero__neon hero__neon--bottom"></div>
+          <div class="hero__particles"></div>
+        </div>
+
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="kicker" data-reveal>
+              <span class="kicker__pill">College Cultural Fest</span>
+              <span class="kicker__dot" aria-hidden="true"></span>
+              <span class="kicker__theme">Theme: Bollywood Days</span>
+            </p>
+
+            <h1 class="title" data-title-reveal>
+              <span class="title__line">Drama</span>
+              <span class="title__line title__line--accent">on Deck</span>
+            </h1>
+
+            <p class="subtitle" data-reveal>
+              <span class="subtitle__big">Lights. Camera. Drama.</span>
+              <span class="subtitle__small"
+                >An immersive Bollywood experience of <mark>games</mark>, <mark>performances</mark> &amp;
+                <mark>music</mark></span
+              >
+            </p>
+              
+            <div class="hero__cta" data-reveal>
+              <!-- Replace these links in script.js -->
+              <a class="btn btn--primary btn--glow" href="#" target="_blank" rel="noreferrer" data-register>
+                <span class="btn__icon" aria-hidden="true">🎟️</span>
+                Register Now
+              </a>
+              <a class="btn btn--ghost" href="#" target="_blank" rel="noreferrer" data-official>
+                <span class="btn__icon" aria-hidden="true">🏛️</span>
+                Visit Us
+              </a>
+            </div>
+
+            <div class="hero__meta" data-reveal>
+              <div class="meta-chip">
+                <span class="meta-chip__icon" aria-hidden="true">🎬</span>
+                <span class="meta-chip__text">Bollywood • Indian Cinema</span>
+              </div>
+              <div class="meta-chip">
+                <span class="meta-chip__icon" aria-hidden="true">💃</span>
+                <span class="meta-chip__text">Drama • Music • Dance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating cinematic elements -->
+          <div class="hero__stage" aria-hidden="true">
+            <!-- Spotlight sweep -->
+            <div class="sweep"></div>
+
+            <!-- Film reel (SVG) -->
+            <div class="float float--reel" style="--float-delay: 0ms">
+              <svg class="icon-reel" viewBox="0 0 220 220" role="img" aria-label="film reel">
+                <defs>
+                  <radialGradient id="rg" cx="50%" cy="50%" r="60%">
+                    <stop offset="0" stop-color="#ffe7a6" stop-opacity="0.9" />
+                    <stop offset="1" stop-color="#b8860b" stop-opacity="0.15" />
+                  </radialGradient>
+                </defs>
+                <circle cx="110" cy="110" r="92" fill="url(#rg)" />
+                <circle cx="110" cy="110" r="84" fill="none" stroke="rgba(255,215,128,.35)" stroke-width="2" />
+                <circle cx="110" cy="110" r="26" fill="rgba(0,0,0,.4)" stroke="rgba(255,215,128,.4)" />
+                <!-- holes -->
+                <g fill="rgba(0,0,0,.35)">
+                  <circle cx="110" cy="52" r="12" />
+                  <circle cx="168" cy="86" r="12" />
+                  <circle cx="168" cy="134" r="12" />
+                  <circle cx="110" cy="168" r="12" />
+                  <circle cx="52" cy="134" r="12" />
+                  <circle cx="52" cy="86" r="12" />
+                </g>
+              </svg>
+              <div class="glow-orb glow-orb--gold"></div>
+            </div>
+
+            <!-- Clapperboard -->
+            <div class="float float--clap" style="--float-delay: 140ms">
+              <div class="clapper">
+                <div class="clapper__top">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <div class="clapper__body">
+                  <div class="clapper__label">ACTION</div>
+                  <div class="clapper__sub">Drama on Deck</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Disco light -->
+            <div class="float float--disco" style="--float-delay: 260ms">
+              <div class="disco">
+                <div class="disco__core"></div>
+                <div class="disco__beam disco__beam--a"></div>
+                <div class="disco__beam disco__beam--b"></div>
+                <div class="disco__beam disco__beam--c"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__scrollhint" aria-hidden="true">
+          <div class="scrollhint">
+            <span class="scrollhint__text">Scroll</span>
+            <span class="scrollhint__mouse"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT / DESCRIPTION -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <h2 class="h2">A cinematic fest night — starring <span class="accent">you</span>.</h2>
+            <p class="lead">
+              Step into a Bollywood-inspired universe where the drama is loud, the music is electrifying, and every
+              moment feels like a title reveal.
+            </p>
+          </div>
+
+          <div class="grid grid--3">
+            <article class="card card--tilt" data-reveal>
+              <h3 class="h3">What’s happening?</h3>
+              <p>
+                A festive, high-energy cultural event featuring <strong>Games</strong>, <strong>Open Mic</strong>,
+                <strong>DJ Night</strong>, and nonstop <strong>Bollywood</strong> vibes.
+              </p>
+              <div class="chips">
+                <span class="chip">Games</span>
+                <span class="chip">Open Mic</span>
+                <span class="chip">DJ Night</span>
+                <span class="chip">Bollywood</span>
+              </div>
+            </article>
+
+            <article class="card card--tilt" data-reveal>
+              <h3 class="h3">Why you’ll love it</h3>
+              <p>
+                Dramatic entrances, cinematic challenges, and crowd moments worthy of slow-motion.
+                Expect surprises, glow, and a soundtrack that refuses to sit still.
+              </p>
+              <ul class="list">
+                <li>Spotlight moments for performers</li>
+                <li>Fun, interactive audience games</li>
+                <li>Photo-ready frames &amp; neon ambience</li>
+              </ul>
+            </article>
+
+            <article class="card card--tilt" data-reveal>
+              <h3 class="h3">Theme &amp; dress code</h3>
+              <p>
+                Go full Bollywood. Think classic cinema, modern glam, or iconic characters.
+                Add a pop of <strong>red</strong>, <strong>gold</strong>, or <strong>royal blue</strong> for the win.
+              </p>
+              <div class="mini-frame">
+                <span class="mini-frame__icon" aria-hidden="true">✨</span>
+                <span class="mini-frame__text">Optional: Movie character-inspired looks</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- GAMES -->
+      <section class="section section--alt" id="games">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <h2 class="h2">Interactive Games</h2>
+            <p class="lead">Fast, fun, dramatic mini-activities — each with a cinematic reveal.</p>
+            <button class="mini-btn mini-btn--tips" type="button" data-tips-toggle>QUICK TIPS</button>
+          </div>
+
+          <div class="grid grid--cards">
+            <article class="game-card" data-reveal>
+              <div class="game-card__top">
+                <div class="badge">
+                  <span class="badge__icon" aria-hidden="true">🎭</span>
+                  <span class="badge__text">Audience Favorite</span>
+                </div>
+                <span class="reveal-line" aria-hidden="true"></span>
+              </div>
+              <h3 class="h3">Guess the Movie from Emojis</h3>
+              <p>Decode iconic films using emoji clues — quickest guess wins the scene.</p>
+              <button class="mini-btn" type="button" data-toast="Tip: Team up and shout your guesses!">
+                Quick tip
+              </button>
+            </article>
+
+            <article class="game-card" data-reveal>
+              <div class="game-card__top">
+                <div class="badge badge--blue">
+                  <span class="badge__icon" aria-hidden="true">🔊</span>
+                  <span class="badge__text">Sound Round</span>
+                </div>
+                <span class="reveal-line" aria-hidden="true"></span>
+              </div>
+              <h3 class="h3">Meme Audio Guessing</h3>
+              <p>Recognize viral dialogues and beats — if you know, you know.</p>
+              <button class="mini-btn" type="button" data-toast="Tip: Listen for the first 2 seconds.">
+                Quick tip
+              </button>
+            </article>
+
+            <article class="game-card" data-reveal>
+              <div class="game-card__top">
+                <div class="badge badge--gold">
+                  <span class="badge__icon" aria-hidden="true">🗣️</span>
+                  <span class="badge__text">Dialogue</span>
+                </div>
+                <span class="reveal-line" aria-hidden="true"></span>
+              </div>
+              <h3 class="h3">Dialogue Delivery</h3>
+              <p>Deliver famous lines with maximum drama — intensity matters.</p>
+              <button class="mini-btn" type="button" data-toast="Tip: Add expressions and pauses for impact.">
+                Quick tip
+              </button>
+            </article>
+
+            <article class="game-card" data-reveal>
+              <div class="game-card__top">
+                <div class="badge badge--pink">
+                  <span class="badge__icon" aria-hidden="true">🧑‍🎤</span>
+                  <span class="badge__text">Impressions</span>
+                </div>
+                <span class="reveal-line" aria-hidden="true"></span>
+              </div>
+              <h3 class="h3">Mimicry</h3>
+              <p>Imitate iconic actors, characters, and voices — crowd decides the best take.</p>
+              <button class="mini-btn" type="button" data-toast="Tip: Signature gestures = instant points.">
+                Quick tip
+              </button>
+            </article>
+
+            <article class="game-card" data-reveal>
+              <div class="game-card__top">
+                <div class="badge badge--violet">
+                  <span class="badge__icon" aria-hidden="true">🎬</span>
+                  <span class="badge__text">Acting</span>
+                </div>
+                <span class="reveal-line" aria-hidden="true"></span>
+              </div>
+              <h3 class="h3">Situational Acting</h3>
+              <p>Get a surprise scenario — build the scene, twist the plot, steal the show.</p>
+              <button class="mini-btn" type="button" data-toast="Tip: Keep it short, punchy, and funny.">
+                Quick tip
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- POSTER + DETAILS -->
+      <section class="section" id="poster">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <h2 class="h2">Poster &amp; Event Details</h2>
+            <p class="lead">All the essentials — framed like a film strip.</p>
+          </div>
+
+          <div class="poster-layout">
+            <figure class="poster-frame" data-reveal>
+              <!-- Replace the poster image if you have one (jpg/png). -->
+              <img class="poster" src="dod.jpeg" alt="Drama on Deck event poster" />
+              <figcaption class="poster-caption">Drama on Deck • Bollywood Days</figcaption>
+            </figure>
+
+            <aside class="details" data-reveal>
+              <div class="details__grid">
+                <div class="detail">
+                  <div class="detail__icon" aria-hidden="true">📅</div>
+                  <div>
+                    <div class="detail__label">Date</div>
+                    <div class="detail__value" data-detail-date>27 February 2026</div>
+                  </div>
+                </div>
+                <div class="detail">
+                  <div class="detail__icon" aria-hidden="true">⏰</div>
+                  <div>
+                    <div class="detail__label">Time</div>
+                    <div class="detail__value" data-detail-time>10:00 AM – 3:00 PM</div>
+                  </div>
+                </div>
+                <div class="detail">
+                  <div class="detail__icon" aria-hidden="true">📍</div>
+                  <div>
+                    <div class="detail__label">Venue</div>
+                    <div class="detail__value" data-detail-venue>AB1-420</div>
+                  </div>
+                </div>
+                <div class="detail">
+                  <div class="detail__icon" aria-hidden="true">🎫</div>
+                  <div>
+                    <div class="detail__label">Entry</div>
+                    <div class="detail__value" data-detail-entry>Open for all • Limited slots</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rules">
+                <h3 class="h3 h3--small">Entry rules</h3>
+                <ul class="list list--compact">
+                  <li>Carry your college ID (if required).</li>
+                  <li>Arrive 15 minutes early for check-in.</li>
+                  <li>Be respectful during performances and games.</li>
+                </ul>
+              </div>
+
+              <div class="details__cta">
+                <a class="btn btn--primary btn--glow" href="#" target="_blank" rel="noreferrer" data-register>
+                  Register Now
+                </a>
+                <a class="btn btn--ghost" href="#coordinators">Contact Coordinators</a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- COORDINATORS -->
+      <section class="section section--alt" id="coordinators">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <h2 class="h2">Coordinator Details</h2>
+            <p class="lead">Need help? Reach out — we’ll keep your scene rolling.</p>
+          </div>
+
+          <div class="coord-wrap">
+            <div class="club-card" data-reveal>
+              <h3 class="h3">NE CLUB</h3>
+              <img
+                src="NElogo.png"
+                alt="NE CLUB logo"
+                class="club-card__logo"
+                loading="lazy"
+              />
+              <div class="social">
+                <a class="social__btn" href="#" target="_blank" rel="noreferrer" aria-label="Instagram" data-social="instagram">
+                  <span class="social__icon" aria-hidden="true">📸</span>
+                  <span class="social__text">Instagram</span>
+                </a>
+                <a class="social__btn" href="#" target="_blank" rel="noreferrer" aria-label="LinkedIn" data-social="linkedin">
+                  <span class="social__icon" aria-hidden="true">in</span>
+                  <span class="social__text">LinkedIn</span>
+                </a>
+                <a class="social__btn" href="#" target="_blank" rel="noreferrer" aria-label="Website" data-social="website">
+                  <span class="social__icon" aria-hidden="true">🌐</span>
+                  <span class="social__text">Website</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="grid grid--2">
+              <article class="person" data-reveal>
+                <div class="person__avatar" aria-hidden="true">🎭</div>
+                <div class="person__info">
+                  <div class="person__name" data-coord-name-1>
+                    Faculty Coordinators Name
+                    <a
+                      class="person__linkedin"
+                      href="#"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Faculty coordinator LinkedIn"
+                      data-coord-linkedin-1
+                    >
+                      in
+                    </a>
+                  </div>
+                  <div class="person__role" data-coord-role-1>Saiful Alom</div>
+                  <!-- <div class="person__role" data-coord-role-1>Subrata Nath</div> -->
+                  <div class="person__links">
+                    <a class="pill" href="tel:+910000000000" data-coord-phone-1 aria-label="Call coordinator">
+                      <span aria-hidden="true"></span> <span data-coord-phone-text-1>+91 00000 00000</span>
+                    </a>
+                    <!-- <a class="pill" href="mailto:coordinator@example.com" data-coord-email-1 aria-label="Email coordinator">
+                      <span aria-hidden="true">✉️</span> <span data-coord-email-text-1>coordinator@example.com</span>
+                    </a> -->
+                  </div>
+                </div>
+              </article>
+
+              <article class="person" data-reveal>
+                <div class="person__avatar" aria-hidden="true">🎶</div>
+                <div class="person__info">
+                  <div class="person__name" data-coord-name-2>
+                    StudentCoordinator Name
+                    <a
+                      class="person__linkedin"
+                      href="#"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Student coordinator LinkedIn"
+                      data-coord-linkedin-2
+                    >
+                      in
+                    </a>
+                  </div>
+                  <div class="person__role" data-coord-role-2>Co-Coordinator</div>
+                  <div class="person__links">
+                    <a class="pill" href="tel:+910000000000" data-coord-phone-2 aria-label="Call coordinator">
+                      <span aria-hidden="true">📞</span> <span data-coord-phone-text-2>+91 00000 00000</span>
+                    </a>
+                    <a class="pill" href="mailto:coordinator@example.com" data-coord-email-2 aria-label="Email coordinator">
+                      <span aria-hidden="true">✉️</span> <span data-coord-email-text-2>coordinator@example.com</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <div class="footer__brand">
+            <img
+              src="NElogo.png"
+              alt="NE CLUB logo"
+              class="footer__logo"
+              loading="lazy"
+            />
+            Drama on Deck
+          </div>
+          <div class="footer__muted">
+            <span data-club-name>NE CLUB</span> • <span data-college-name>VIT Bhopal University</span>
+          </div>
+          <div class="footer__email">
+            <a href="mailto:northeast.vitb@gmail.com">northeast.vitb@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="footer__right">
+          <div class="footer__social">
+            <a class="footer__icon" href="#" target="_blank" rel="noreferrer" aria-label="Instagram" data-social="instagram">📸</a>
+            <a class="footer__icon" href="#" target="_blank" rel="noreferrer" aria-label="LinkedIn" data-social="linkedin">in</a>
+            <a class="footer__icon" href="#" target="_blank" rel="noreferrer" aria-label="Website" data-social="website">🌐</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tips-panel" data-tips-panel aria-hidden="true">
+        <div class="tips-panel__inner">
+          <h3 class="tips-panel__title">Quick tips for games</h3>
+          <ul class="tips-panel__list">
+            <li>Warm up your voice and expressions before you play.</li>
+            <li>Think fast, but keep it fun and dramatic.</li>
+            <li>Cheer loudly — the crowd energy makes every round better.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Bollywood Never Sleeps</span>
+          <span>Bollywood Never Sleeps</span>
+          <span>Bollywood Never Sleeps</span>
+          <span>Bollywood Never Sleeps</span>
+          <span>Bollywood Never Sleeps</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast (micro-interactions) -->
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+      <div class="toast__inner">
+        <span class="toast__icon" aria-hidden="true">🎞️</span>
+        <span class="toast__text">Text</span>
+      </div>
+    </div>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
+
