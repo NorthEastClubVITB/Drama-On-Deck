@@ -237,14 +237,9 @@ Example folder structure for the project:
 ```text
 ADVITYA-2026-Drama-on-Deck/
 ├─ index.html
-├─ css/
-│  ├─ styles.css
-│  ├─ responsive.css        # (optional) breakpoint-specific overrides
-│  └─ animations.css        # (optional) keyframe definitions
-├─ js/
-│  ├─ main.js               # core interactions and navigation
-│  ├─ intro.js              # intro animation + skip logic
-│  └─ utilities.js          # helper functions (if any)
+├─ style.css       
+├─ index.js            
+│            
 ├─ assets/
 │  ├─ images/
 │  │  ├─ logo.png
