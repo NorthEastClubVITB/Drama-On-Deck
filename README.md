@@ -272,7 +272,7 @@ ADVITYA-2026-Drama-on-Deck/
 If using Git:
 
 ```bash
-git clone <REPOSITORY_URL>
+git clone https://github.com/NorthEastClubVITB/Drama-On-Deck
 cd ADVITYA-2026-Drama-on-Deck
 ```
 
